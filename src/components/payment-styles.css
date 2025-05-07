@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .temu-payment-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .temu-payment-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .temu-payment-header h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .temu-payment-summary {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .temu-payment-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .temu-payment-summary-header h2 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .temu-collapse-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .temu-payment-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .temu-payment-total {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .temu-payment-methods {
+    margin-bottom: 20px;
+  }
+  
+  .temu-payment-methods h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .temu-payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .temu-payment-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .temu-payment-option.selected {
+    border-color: #ff4d4f;
+    background-color: rgba(255, 77, 79, 0.05);
+  }
+  
+  .temu-payment-option-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #ff4d4f;
+  }
+  
+  .temu-payment-option.selected .temu-payment-option-radio {
+    border-color: #ff4d4f;
+    background-color: #ff4d4f;
+    color: white;
+  }
+  
+  .temu-payment-option-icon {
+    margin-right: 15px;
+    color: #666;
+  }
+  
+  .paypal-icon {
+    color: #003087;
+    font-weight: bold;
+  }
+  
+  .paypal-text {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .paypal-text-pal {
+    color: #009cde;
+  }
+  
+  .temu-payment-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .temu-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .temu-form-row {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .temu-form-row .temu-form-group {
+    flex: 1;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #ff4d4f;
+  }
+  
+  .temu-input-wrapper {
+    position: relative;
+  }
+  
+  .temu-card-icons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+  }
+  
+  .temu-card-icon {
+    width: 30px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .temu-card-icon.visa {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 324'%3E%3Cpath fill='%23142787' d='M651.3 0H348.5L348.7 323.7H651.3z'/%3E%3Cpath fill='%23FFF' d='M387 131.1c-.5 38.5 34.4 59.9 60.8 72.6 27 13 36.1 21.4 36 33.1-.1 17.9-21.6 25.8-41.5 26.1-34.9.5-55.2-9.4-71.2-16.9l-12.6 58.9c16.1 7.4 46 13.8 77 14.1 72.7 0 120.4-35.9 120.6-91.6.3-70.5-97.7-74.5-97-106.1.2-9.6 9.4-19.8 29.4-22.4 9.9-1.3 37.2-2.3 68.1 11.9l12.1-56.6c-16.6-6-38-11.7-64.7-11.7-68.3 0-116.4 36.3-116.9 88.6m295.7-83.3c-13.3 0-24.5 7.8-29.5 19.7l-104 247.2h72.7l14.5-40h88.9l8.4 40h64.1L743.5 47.8h-60.8m10.5 71.9l21 99.7h-57.4l36.4-99.7M293.1 47.8l-57.1 247.2h69.2l57.1-247.2h-69.2m-102.4 0L126.5 209 93.9 70.8c-3.8-16.3-15-22.9-28.1-23H1.5L0 55.5c13.9 3 29.7 7.9 39.3 13.1 5.9 3.2 7.5 6 9.5 13.6l31.9 165.8h73L232.9 47.8h-42.2'/%3E%3C/svg%3E");
+  }
+  
+  .temu-card-icon.mastercard {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 131.39 86.9'%3E%3Cpath d='M48.37 15.14h34.66v56.61H48.37z' fill='%23ff5f00'/%3E%3Cpath d='M51.94 43.45a35.94 35.94 0 0113.75-28.3 36 36 0 100 56.61 35.94 35.94 0 01-13.75-28.31z' fill='%23eb001b'/%3E%3Cpath d='M120.5 65.76V64.6h.5v-.24h-1.19v.24h.47v1.16zm2.31 0v-1.4h-.36l-.42 1-.42-1h-.36v1.4h.26V64.7l.39.91h.27l.39-.91v1.06zM123.94 43.45a36 36 0 01-58.25 28.3 36 36 0 000-56.61 36 36 0 0158.25 28.3z' fill='%23f79e1b'/%3E%3C/svg%3E");
+  }
+  
+  .temu-card-icon.amex {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 104 64'%3E%3Cpath d='M104 64H0V0h104z' fill='%23016fd0'/%3E%3Cpath d='M52 32l2.25-5.45L56.5 32h-4.5zm31.69-5.55h-5.1V22.1h5.1v4.35zm-20.16 11l-4.85-11.2h-3.28v15.65l-6.5-15.65H45l-6.7 15.85h3.83l1.4-3.35h7.13l1.4 3.35h7.65V27.6l5.3 12.85h2.53l5.3-12.7v12.7h3.6V21.8h-5.9l-4.1 9.65zm20.16-4.2h-9.15V21.8h-3.65v15.45h12.8v-4zm-58.97-6.8h-9.5V22.1h-3.65v15.45h3.65v-6.8h9.5v6.8h3.65V22.1h-3.65v4.35z' fill='%23fff'/%3E%3C/svg%3E");
+  }
+  
+  .temu-payment-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .temu-payment-button:hover {
+    background-color: #ff3333;
+  }
+  
+  .temu-payment-security {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    color: #666;
+    font-size: 13px;
+  }
+  
+  .temu-payment-info {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .temu-payment-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .temu-payment-info a {
+    color: #ff4d4f;
+    text-decoration: none;
+  }
+  
+  .temu-payment-info a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 480px) {
+    .temu-payment-container {
+      padding: 15px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  
+    .temu-form-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  

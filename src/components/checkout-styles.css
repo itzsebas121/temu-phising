@@ -38,7 +38,7 @@
   }
   
   .temu-logo-text {
-    color: #ff4d4f;
+    color: #ff8f1f;
     font-weight: bold;
     font-size: 24px;
   }
@@ -180,7 +180,7 @@
   
   .temu-tag-limited,
   .temu-tag-discount {
-    background-color: #ff4d4f;
+    background-color: #ff8f1f;
     color: white;
     padding: 2px 4px;
     border-radius: 4px;
@@ -275,7 +275,7 @@
   }
   
   .temu-add-address-button {
-    background-color: #ff4d4f;
+    background-color: #ff8f1f;
     color: white;
     border: none;
     border-radius: 8px;
@@ -432,7 +432,7 @@
   }
   
   .temu-checkout-button {
-    background-color: #ff4d4f;
+    background-color: #ff8f1f;
     color: white;
     border: none;
     border-radius: 8px;
@@ -449,7 +449,7 @@
   .temu-checkout-icon {
     position: absolute;
     bottom: -10px;
-    background-color: #ff8f1f;
+    background-color: #ff4d4f;
     color: white;
     font-size: 12px;
     padding: 2px 8px;
@@ -655,7 +655,7 @@
   }
   
   .temu-add-card-button {
-    background-color: #ff4d4f;
+    background-color: #ff8f1f;
     color: white;
     border: none;
     border-radius: 8px;
